@@ -14,10 +14,13 @@
     "@testing-library/react": "11.2.5",
     "map": "1.0.1",
     "react": "17.0.1",
+    "react-awesome-slider": "4.1.0",
     "react-dom": "17.0.1",
     "react-icons": "4.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.0",
+    "react-slick": "0.28.0",
+    "slick-carousel": "1.8.1",
     "source-map": "0.7.3",
     "styled-components": "5.2.1",
     "web-vitals": "1.1.0"
