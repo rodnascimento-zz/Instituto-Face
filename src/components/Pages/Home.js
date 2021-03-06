@@ -4,7 +4,7 @@ import Slider from "../Slider/Slider";
 
 export default function Home() {
   return (
-    <div className="home">
+    <div className="/principal/home">
       <Slider />
     </div>
   );
