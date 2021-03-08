@@ -1,54 +1,7 @@
-import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
-import StoreContext from "../Store/Context";
-import UIButton from "../UI/Button/Button";
+import React from "react";
+import { useFormik } from "formik";
 
-import "./Login.css";
-
-function initialState() {
-  return { user: "", password: "" };
-}
-
-function login({ user, password }) {
-  if (user === "admin" && password === "admin") {
-    return { token: "1234" };
-  }
-  return { error: "Usuário ou senha inválido" };
-}
-
-const UserLogin = () => {
-  const [values, setValues] = useState(initialState);
-  const [error, setError] = useState(null);
-  const { setToken } = useContext(StoreContext);
-  const history = useHistory();
-
-  function onChange(event) {
-    const { value, name } = event.target;
-
-    setValues({
-      ...values,
-      [name]: value
-    });
-  }
-
-  function onSubmit(event) {
-    event.preventDefault();
-
-    const { token, error } = login(values);
-
-    if (token) {
-      setToken(token);
-      return history.push("/principal/home");
-    }
-
-    setError(error);
-    setValues(initialState);
-  }
-
-  function onSubmitAdd(event) {
-    return history.push("/add");
-  }
-
+export default function Add() {
   return (
     <div className="user-login">
       <h1 className="user-login__title">Acessar o Sistema -colocar icone-</h1>
@@ -82,8 +35,6 @@ const UserLogin = () => {
         >
           Entrar
         </UIButton>
-      </form>
-      <form onSubmit={onSubmitAdd}>
         <UIButton
           type="submit"
           theme="contained-blue"
@@ -95,6 +46,4 @@ const UserLogin = () => {
       </form>
     </div>
   );
-};
-
-export default UserLogin;
+}

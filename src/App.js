@@ -9,6 +9,7 @@ import RoutesPrivate from "./components/Routes/Private/Private";
 import Home from "./components/Pages/Home";
 import Calendario from "./components/Pages/Calendario";
 import Turma from "./components/Pages/Turma";
+import Add from "./pages/Add";
 import Login from "./pages/Login";
 import Principal from "./pages/Principal";
 
@@ -39,6 +40,7 @@ export default function App() {
         <Switch>
           <Route path="/principal/" component={Principal} />
           <Route path="/login" component={Login} />
+          <Route path="/add" component={Add} />
         </Switch>
       </StoreProvider>
     </Router>

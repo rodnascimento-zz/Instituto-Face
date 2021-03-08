@@ -8,21 +8,16 @@ export const SidebarData = [
   {
     title: "home",
     icon: <AiIcons.AiFillHome />,
-    link: "/home"
-  },
-  {
-    title: "mail",
-    icon: <AiIcons.AiFillMail />,
-    link: "/mail"
+    link: "/principal/home"
   },
   {
     title: "calendario",
     icon: <BsIcons.BsFillCalendarFill />,
-    link: "/calendario"
+    link: "/principal/calendario"
   },
   {
     title: "turma",
     icon: <TiIcons.TiGroup />,
-    link: "/turma"
+    link: "/principal/turma"
   }
 ];

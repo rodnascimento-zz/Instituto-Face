@@ -12,7 +12,7 @@ export default function Sidebar() {
             <li
               className="row"
               key={key}
-              id={window.location.pathname == val.link ? "active" : " "}
+              id={window.location.pathname === val.link ? "active" : " "}
               onClick={() => {
                 window.location.pathname = val.link;
               }}
